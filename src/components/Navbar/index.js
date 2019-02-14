@@ -8,7 +8,7 @@ function Navbar() {
             <nav className="navbar navbar-dark bg-primary">
                 <ul className="navbar-nav">
                     <li className="navbar-brand">
-                        Clickerama
+                        Clickerama: Superhero Edition
         </li>
                 </ul>
             </nav>
