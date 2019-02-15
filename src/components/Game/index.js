@@ -13,6 +13,18 @@ class Game extends Component {
         clicked : [],
     };
 
+    shuffle = function (a, cb) {
+        var i = a.length;
+        while (0 !== i) {
+            let j = Math.floor(Math.random() * i);
+            i--;
+            var temp = a[i];
+            a[i] = a[j]
+            a[j] = temp
+        };
+       cb(a);
+    };
+
     click = (id) => {
         
         console.log(id);
@@ -51,8 +63,16 @@ class Game extends Component {
                     this.setState({score: 0});
                     this.setState({clicked:[]})
                 }
-        }
-        
+        };
+
+        let newCharacterArray = this.state.character;
+
+        this.shuffle(newCharacterArray, () => {
+            console.log(newCharacterArray);
+            this.setState({ character: newCharacterArray });
+        });
+
+
     };
 
     componentDidMount(){
@@ -77,7 +97,7 @@ class Game extends Component {
                     <p>Top Score: {this.state.topScore} </p>
                 </div>
                 <div className="Picblock">
-                    {character.map((person) =>
+                    {this.state.character.map((person) =>
                         <Picblock
                             image={person.image}
                             name={person.name}
