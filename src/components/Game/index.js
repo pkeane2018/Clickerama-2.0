@@ -6,7 +6,6 @@ import "./style.css";
 
 class Game extends Component {
     state = {
-        progress: "begin",
         score: 0,
         topScore: 0,
         character: character, 
@@ -79,14 +78,12 @@ class Game extends Component {
 
     };
 
-    componentDidMount(){
-        console.log(this.state.clicked.length)
-    };
-
     componentDidUpdate(){
         console.log(this.state.clicked);
         if (this.state.score === 12) {
+            var currentScore = this.state.score;
             alert("You got all 12! You win!");
+            this.setState({topScore: currentScore});
             this.setState({score: 0});
             this.setState({clicked:[]})
         }
