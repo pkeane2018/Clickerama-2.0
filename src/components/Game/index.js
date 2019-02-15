@@ -9,22 +9,54 @@ class Game extends Component {
         progess: "begin",
         score: 0,
         topScore: 0,
-        character: character 
+        character: character, 
+        clicked : [],
     };
 
-    click = () => {
-        if (this.state.clicked === false) {
-            this.setState( () => ({ clicked: true }));
-        } else {
+    click = (id) => {
+        
+        console.log(id);
+        let clickedArray = this.state.clicked;
 
+        if (clickedArray.length === 0) {
+            clickedArray.push(id);
+            this.setState({clicked: clickedArray});
+            this.setState({score: this.state.score + 1});
+        }  
+
+        else {
+            var chosen = false;
+
+            for (var i = 0; i < clickedArray.length; i++) {
+                
+                if (clickedArray[i] === id) {
+                    chosen = true;
+                }
+
+            };
+                if (chosen === false) {
+                    clickedArray.push(id);
+                    this.setState({score: this.state.score + 1});
+                    this.setState({clicked: clickedArray})
+                }
+
+                else {
+                    this.setState({score: 0})
+                }
         }
+        
+    };
+
+    componentDidMount(){
+        console.log(this.state.clicked.length)
+    };
+
+    componentDidUpdate(){
+        console.log(this.state.clicked)
     };
 
     render() {
-
-        console.log(this.state.character);
-        // const character = this.state.character;
-
+       
         return (
             <div className="container">
                 <Navbar />
@@ -41,7 +73,8 @@ class Game extends Component {
                         <Picblock
                             image={person.image}
                             name={person.name}
-                            click={this.click.bind(this)}
+                            id = {person.id}
+                            click={this.click}
                         />
                     )}
                 </div>
