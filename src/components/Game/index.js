@@ -6,7 +6,7 @@ import "./style.css";
 
 class Game extends Component {
     state = {
-        progess: "begin",
+        progress: "begin",
         score: 0,
         topScore: 0,
         character: character, 
@@ -26,6 +26,7 @@ class Game extends Component {
 
         else {
             var chosen = false;
+            var currentScore = 0;
 
             for (var i = 0; i < clickedArray.length; i++) {
                 
@@ -41,7 +42,14 @@ class Game extends Component {
                 }
 
                 else {
-                    this.setState({score: 0})
+                    currentScore = this.state.score;
+
+                    if (currentScore > this.state.topScore) {
+                        this.setState({topScore: currentScore})
+                    }
+
+                    this.setState({score: 0});
+                    this.setState({clicked:[]})
                 }
         }
         
