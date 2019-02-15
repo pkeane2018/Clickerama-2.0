@@ -49,15 +49,19 @@ class Game extends Component {
             };
                 if (chosen === false) {
                     clickedArray.push(id);
+                    this.setState({clicked: clickedArray});
                     this.setState({score: this.state.score + 1});
-                    this.setState({clicked: clickedArray})
                 }
 
                 else {
+
+                    alert("Wrong guess! Game over.")
                     currentScore = this.state.score;
 
                     if (currentScore > this.state.topScore) {
-                        this.setState({topScore: currentScore})
+                        alert("New top score!");
+                        this.setState({topScore: currentScore});
+                        
                     }
 
                     this.setState({score: 0});
@@ -80,7 +84,12 @@ class Game extends Component {
     };
 
     componentDidUpdate(){
-        console.log(this.state.clicked)
+        console.log(this.state.clicked);
+        if (this.state.score === 12) {
+            alert("You got all 12! You win!");
+            this.setState({score: 0});
+            this.setState({clicked:[]})
+        }
     };
 
     render() {
