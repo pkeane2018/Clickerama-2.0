@@ -4,19 +4,19 @@ self.__precacheManifest = [
     "url": "/Clickerama-2.0/static/js/runtime~main.ea7c0be1.js"
   },
   {
-    "revision": "f8148f37f72bdf42838f",
-    "url": "/Clickerama-2.0/static/js/main.f8148f37.chunk.js"
+    "revision": "78d4a94eb6f7196bb463",
+    "url": "/Clickerama-2.0/static/js/main.78d4a94e.chunk.js"
   },
   {
     "revision": "d16a266844ec01aafc8a",
     "url": "/Clickerama-2.0/static/js/2.d16a2668.chunk.js"
   },
   {
-    "revision": "f8148f37f72bdf42838f",
+    "revision": "78d4a94eb6f7196bb463",
     "url": "/Clickerama-2.0/static/css/main.f5f74480.chunk.css"
   },
   {
-    "revision": "dcbb28c8e1689326171607e870e40e77",
+    "revision": "9a289eb3a197d83587ec6a6a212a5213",
     "url": "/Clickerama-2.0/index.html"
   }
 ];
