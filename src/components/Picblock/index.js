@@ -7,18 +7,29 @@ class PicBlock extends Component {
         this.state = {
             clicked: false
         }
-    }
+    };
+
+    componentDidMount(){
+        console.log(this.props.name + ":" + this.state.clicked)
+    };
+
+    componentDidUpdate(){
+        console.log(this.props.name + ":" + this.state.clicked)
+    };
+
     render() {
+
         return (
-            <div className="img-container container">
+            <span onClick={() => {this.props.click()}} >
+            <div className="img-container container" onClick={this.click}>
            <img
            src={this.props.image}
            alt={this.props.name}
            />
            </div>
+           </span>
         )
     }
-
 
 };
 

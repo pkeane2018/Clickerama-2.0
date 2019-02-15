@@ -9,7 +9,15 @@ class Game extends Component {
         progess: "begin",
         score: 0,
         topScore: 0,
-        character: { character }
+        character: character 
+    };
+
+    click = () => {
+        if (this.state.clicked === false) {
+            this.setState( () => ({ clicked: true }));
+        } else {
+
+        }
     };
 
     render() {
@@ -30,9 +38,10 @@ class Game extends Component {
                 </div>
                 <div className="Picblock">
                     {character.map((person) =>
-                        <Picblock style
+                        <Picblock
                             image={person.image}
                             name={person.name}
+                            click={this.click.bind(this)}
                         />
                     )}
                 </div>
