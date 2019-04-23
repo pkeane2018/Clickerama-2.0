@@ -13,6 +13,14 @@ One subfolder in the 'src' folder is 'components.' The 'components' folder in tu
 
 ## How to use the site
 The goal of the game is to click on the image of each character, without clicking on any more than once. However, every time an image is clicked, the order of the characters on the page is shuffled. The user must remember which one he or she has already clicked. Each time the user clicks on the image of a new character, his or her score increases by one. If the user clicks on a character twice, a message appears on screen stating that he or she has lost and the score is reset to zero. If the score up until that point is higher than the user's previous top score, an alert is displayed informing the user that this score is the new top score. If the user successfully clicks on all 12 characters, an alert is displaying telling the user that he or she has won and the game is over.
+<br><br>
+![Image 1](./images/image-1.png)
+<br><br>
+![Image 2](./images/image-2.png)
+<br><br>
+![Image 3](./images/image-3.png)
+<br><br>
+![Image 4](./images/image-4.png)
 
 ## Technology used
 
