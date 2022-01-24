@@ -2,13 +2,13 @@
     {
         "id": 1,
         "name": "Superman",
-        "image": "https://upload.wikimedia.org/wikipedia/en/thumb/e/eb/SupermanRoss.png/250px-SupermanRoss.png"
+        "image": "https://upload.wikimedia.org/wikipedia/en/3/35/Supermanflying.png"
     },
 
     {
         "id": 2,
         "name": "Batman",
-        "image": "https://upload.wikimedia.org/wikipedia/en/7/7b/Batman_%28DC_Rebirth_version%29.png"
+        "image": "https://www.pngall.com/wp-content/uploads/4/Batman.png"
     },
 
     {
@@ -32,7 +32,7 @@
     {
         "id": 6,
         "name": "Captain America",
-        "image": "https://requestreduce.org/images/marvel-character-clipart-on-transparent-background-6.jpg"
+        "image": "https://www.writeups.org/wp-content/uploads/Captain-America-Marvel-Comics-Avengers-Steve-Rogers-e.jpg"
     },
 
     {
